@@ -37,7 +37,7 @@ docker images
 - clear all local docker stuff
 
 ```powershell
-clear out all the not running stuff
+docker system prune -a
 ```
 
 - Build docker images
@@ -46,7 +46,7 @@ clear out all the not running stuff
 docker build -t [DOCKER_IMAGE_NAME]:[TAG] .
 ```
 
-example
+- - example
 
 ```powershell
 docker build -t my_docker_flask:latest .
@@ -58,7 +58,7 @@ docker build -t my_docker_flask:latest .
 docker run -d -p [PORT_ON_HOST]:[PORT_ON_DOCKER_NETWORK] [DOCKER_IMAGE_NAME]:[TAG]
 ```
 
-example
+- - example
 
 ```powershell
 docker run -d -p 5000:5000 my_docker_flask:latest
@@ -70,4 +70,46 @@ docker run -d -p 5000:5000 my_docker_flask:latest
 
 ```powershell
 python --version
+```
+
+- update pip
+
+```powershell
+python -m pip install --upgrade pip
+```
+
+- instal requirements
+
+```powershell
+pip install -r [FILE_NAME]
+```
+
+- - examples
+
+```powershell
+pip install -r requirements.txt
+```
+
+- add virtual enviroment
+
+```powershell
+py -m venv env
+```
+
+- activate virtual enviroment
+
+```powershell
+.\env\Scripts\activate
+```
+
+- deactivate virtual enviroment
+
+```powershell
+deactivate
+```
+
+- check virtual enviroment
+
+```powershell
+where python
 ```
